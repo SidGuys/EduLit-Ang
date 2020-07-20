@@ -1,0 +1,99 @@
+.avatar {
+  white-space: nowrap;
+  background-color: #c3c3c3;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  display: inline-flex;
+  font-size: 0.75rem;
+  text-align: center;
+  vertical-align: middle;
+  margin: 5px;
+}
+.avatar .avatar-content {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar .avatar-content .avatar-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.avatar:not(.avatar-stats) svg {
+  height: 12px;
+  width: 12px;
+}
+.avatar [class*='avatar-status-'] {
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #fff;
+}
+.avatar [class*='avatar-status-'].avatar-status-lg {
+  width: 17px;
+  height: 17px;
+  border-width: 2px;
+}
+.avatar .avatar-status-online {
+  background-color: #28c76f;
+}
+.avatar .avatar-status-busy {
+  background-color: #ea5455;
+}
+.avatar .avatar-status-away {
+  background-color: #ff9f43;
+}
+.avatar .avatar-status-offline {
+  background-color: #b8c2cc;
+}
+.avatar img {
+  border-radius: 50%;
+}
+.avatar.avatar-xl {
+  font-size: 1.5rem;
+}
+.avatar.avatar-xl img {
+  width: 70px;
+  height: 70px;
+}
+.avatar.avatar-xl .avatar-content {
+  height: 70px;
+  width: 70px;
+}
+.avatar.avatar-xl .avatar-content .avatar-icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+.avatar.avatar-lg {
+  font-size: 1.2rem;
+}
+.avatar.avatar-lg img {
+  width: 50px;
+  height: 50px;
+}
+.avatar.avatar-lg .avatar-content {
+  width: 50px;
+  height: 50px;
+}
+.avatar.avatar-lg .avatar-content .avatar-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+.avatar.avatar-sm .avatar-content {
+  width: 24px;
+  height: 24px;
+}
+.avatar.avatar-sm .avatar-content .avatar-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+.avatar.avatar-sm img {
+  width: 24px;
+  height: 24px;
+}

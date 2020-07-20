@@ -1,0 +1,93 @@
+@import './themes';
+
+@mixin nb-overrides() {
+  nb-select.size-medium button {
+    padding: 0.4375rem 2.2rem 0.4375rem 1.125rem !important;
+
+    nb-icon {
+      right: 0.41rem !important;
+    }
+  }
+
+  nb-icon i {
+    fill: nb-theme(background-primary-color-1);
+    display: inline-block;
+    max-width: 150px;
+    max-height: 150px;
+    width: 100%;
+    height: 100%;
+  }
+
+  nb-icon:hover i {
+    fill: #fff;
+  }
+  
+  .eva-parent-hover nb-icon i {
+    fill: nb-theme(background-primary-color-1);
+    display: inline-block;
+    max-width: 150px;
+    max-height: 150px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .eva-parent-hover:hover nb-icon i {
+    fill: #fff;
+  }
+ 
+
+  .fc-theme-bootstrap {
+    .btn-primary {
+      border-style: nb-theme(button-filled-border-style);
+      border-width: nb-theme(button-filled-border-width);
+      text-transform: nb-theme(button-filled-text-transform);
+
+      background-color: nb-theme(button-filled-primary-background-color);
+      border-color: nb-theme(button-filled-primary-border-color);
+      color: nb-theme(button-filled-primary-text-color);
+
+      &:focus {
+        background-color: nb-theme(button-filled-primary-focus-background-color);
+        border-color: nb-theme(button-filled-primary-focus-border-color);
+      }
+
+      &:hover {
+        background-color: nb-theme(button-filled-primary-hover-background-color);
+        border-color: nb-theme(button-filled-primary-hover-border-color);
+      }
+
+      &:active, &.active {
+        background-color: nb-theme(button-filled-primary-active-background-color);
+        border-color: nb-theme(button-filled-primary-active-border-color);
+      }
+
+      &[disabled] {
+        background-color: nb-theme(button-filled-primary-disabled-background-color);
+        border-color: nb-theme(button-filled-primary-disabled-border-color);
+        color: nb-theme(button-filled-primary-disabled-text-color);
+      }
+    }
+
+    .fc-daygrid-block-event {
+      background-color: nb-theme(button-filled-primary-background-color);
+      border-color: nb-theme(button-filled-primary-border-color);
+      color: nb-theme(button-filled-primary-text-color);
+
+      &:focus {
+        background-color: nb-theme(button-filled-primary-focus-background-color);
+        border-color: nb-theme(button-filled-primary-focus-border-color);
+      }
+
+      &:hover {
+        background-color: nb-theme(button-filled-primary-hover-background-color);
+        border-color: nb-theme(button-filled-primary-hover-border-color);
+      }
+    }
+
+    .fc-daygrid-dot-event {
+      .fc-daygrid-event-dot {
+        border-color: nb-theme(button-filled-primary-border-color);
+      }
+    }
+  }
+}

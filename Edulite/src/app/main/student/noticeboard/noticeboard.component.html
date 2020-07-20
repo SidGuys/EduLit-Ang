@@ -1,0 +1,26 @@
+<div class="noticeboard"> 
+  <nb-card class="own-scroll">
+    <nb-card-header>
+      <div class="h5">NOTICE BOARD</div>
+    </nb-card-header>
+    <nb-list
+      nbInfiniteList
+      [threshold]="500"
+      (bottomThreshold)="loadNext(firstCard)">
+      <nb-list-item *ngFor="let post of firstCard.news">
+        <article>
+          <h2>{{post.title}}</h2>
+          <p>{{post.text}}</p>
+          <a [attr.href]="post.link">Read full article</a>
+        </article>
+        
+      </nb-list-item>
+      <nb-list-item *ngFor="let _ of firstCard.placeholders">
+        <div class="title-placeholder"></div>
+        <div class="text-placeholder"></div>
+        <div class="link-placeholder"></div>
+
+      </nb-list-item>
+    </nb-list>
+  </nb-card>  
+</div>

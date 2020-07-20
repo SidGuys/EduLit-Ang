@@ -1,0 +1,51 @@
+<div class="schedule"> 
+  <nb-card>
+    <nb-card-header>
+      <div class="h5">SCHEDULE</div>
+    </nb-card-header>
+    <nb-card-body>
+      <div class="row">
+        <div class="calender-container col-md-12 col-lg-7 col-xxxl-7">
+          <full-calendar *ngIf="calendarOptions" #fullcalendar [options]="calendarOptions" [deepChangeDetection]="true"></full-calendar>
+        </div>
+        <div class="event-container col-md-12 col-lg-5 col-xxxl-5">
+          <nb-card *ngIf="displayEvent" class="current-event" >
+            <nb-card-header>
+              <div class="h5">Event Details</div>
+            </nb-card-header>
+            <nb-card-body>
+              <div class="row">
+                <div class="col-md-12 col-lg-12 col-xxxl-12">
+                  <div class="details">
+                    <div class="title">Event Title</div>
+                    <div class="status paragraph-2">{{ currentEvent.title }}</div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-lg-12 col-xxxl-12">
+                  <div class="details">
+                    <div class="title">Start Time</div>
+                    <div class="status paragraph-2">{{ currentEvent.start }}</div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-lg-12 col-xxxl-12">
+                  <div class="details">
+                    <div class="title">End Time</div>
+                    <div class="status paragraph-2">{{ currentEvent.end }}</div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-lg-12 col-xxxl-12">
+                  <div class="details">
+                    <div class="title">Description</div>
+                    <div class="status paragraph-2">{{ currentEvent.description }}</div>
+                  </div>
+                </div>
+              </div>
+            </nb-card-body>
+          </nb-card>
+        </div>
+      </div>
+      
+    </nb-card-body>
+  </nb-card>
+    
+</div>

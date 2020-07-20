@@ -1,0 +1,43 @@
+<div class="grades"> 
+  <nb-card>
+    <nb-card-header>
+      <div class="h5">GRADES</div>
+    </nb-card-header>
+    <nb-card-body>
+      <nb-card>
+        <nb-card-header>
+          <span>Displaying results of: {{selectedExamName}} </span>
+          <nb-select [(selected)]="selectedExamId" (selectedChange)="showGrades($event)">
+            <nb-option *ngFor="let exam of exams" [value]="exam.id">{{ exam.Title }}</nb-option>
+          </nb-select>
+        </nb-card-header>
+        <nb-card-body *ngIf="selectedExamGrades && selectedExamGrades.length > 0" >
+          <div class="row">
+            <div class="col-md-12 col-lg-6 col-xxxl-6" >
+              <nb-list>
+                <nb-list-item class="item" *ngFor="let item of selectedExamGrades; trackBy: trackByDate">
+                  <span>{{ item.subject }}</span>
+                  <span>{{ item.marksAchieved }}</span>
+                  <span>{{ item.marksOutof }}</span>
+                  <span>{{ item.marksPercent }}%</span>
+                </nb-list-item>
+              </nb-list>
+            </div>
+            <div class="col-md-12 col-lg-6 col-xxxl-6" >
+              <ngx-grades-bar-chart 
+                [selectedExamName]="selectedExamName"
+                [gradesData]="selectedExamGrades">
+              </ngx-grades-bar-chart>
+            </div>
+          </div>
+        </nb-card-body>
+        <nb-card-footer class="grades-footer">
+          <ngx-subject-percentage *ngFor="let item of selectedExamGrades" 
+            [subjectData]="item"
+            [chartValue]="item"
+          ></ngx-subject-percentage>
+        </nb-card-footer>
+      </nb-card>
+    </nb-card-body>
+  </nb-card>  
+</div>

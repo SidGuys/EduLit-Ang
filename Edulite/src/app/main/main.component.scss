@@ -1,0 +1,57 @@
+@import '../@theme/styles/themes';
+
+@include nb-install-component() {
+  ::ng-deep router-outlet + * {
+    display: block;
+    animation: fade 1s;
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+:host /deep/ {
+
+  .menu-item a {
+    font-size: 1.2rem !important;
+  }
+
+  .menu-item .menu-icon {
+    width: 1.3em !important;
+    height: 1.3em !important;
+  }
+
+  nb-sidebar.compacted {
+    width: 7.5rem;
+  }
+
+  nb-sidebar.compacted .main-container {
+    width: 7.5rem;
+  }
+
+  nb-sidebar.compacted nb-menu {
+    width: 7.5rem;
+  }
+
+  nb-sidebar.compacted nb-menu .menu-items > .menu-item a {
+    flex-direction: column;
+    .menu-icon {
+      width: 2.3em !important;
+      height: 2.3em !important;
+    }
+  }
+
+  nb-sidebar.compacted nb-menu > .menu-items > .menu-item > a span,
+  nb-sidebar.compacted nb-menu > .menu-items > .menu-item > a .expand-state {
+    font-size: 12px !important;
+    display: block !important;
+  }
+
+}
